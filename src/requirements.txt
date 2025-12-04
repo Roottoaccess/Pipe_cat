@@ -1,0 +1,30 @@
+loguru
+python-dotenv
+websockets
+aiohttp
+requests
+numpy
+scipy
+sounddevice
+soundfile
+uvloop
+pydantic
+transformers
+fastapi
+uvicorn
+
+# Deepgram STT
+deepgram-sdk
+
+# OpenAI LLM + TTS
+openai
+
+# Daily transport
+daily-python
+
+# FIXED: Correct Pipecat version with all extras
+pipecat[audio,models,daily,openai,deepgram]==0.3.0
+
+# Required by Smart Turn Analyzer
+torch==2.4.0
+onnxruntime
