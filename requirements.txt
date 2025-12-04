@@ -1,6 +1,26 @@
-pipecat
-fastapi
+loguru
 python-dotenv
+websockets
+aiohttp
 pydantic
+numpy
+sounddevice
+scipy
+
+# Deepgram STT
+deepgram-sdk
+
+# OpenAI (LLM + TTS)
+openai
+
+# Optional: RTVI dependencies
+uvloop
+
+# General utilities
+requests
+python-dotenv
+loguru
+transformers
+fastapi
 requests
 uvicorn
