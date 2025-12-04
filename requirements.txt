@@ -19,12 +19,12 @@ deepgram-sdk
 # OpenAI LLM + TTS
 openai
 
-# Daily transport (correct)
+# Daily transport
 daily-python
 
-# Pipecat with all required components
-pipecat[audio,models,daily,openai,deepgram]
+# FIXED: Correct Pipecat version with all extras
+pipecat[audio,models,daily,openai,deepgram]==0.3.0
 
-# Needed for Silero + SmartTurn
+# Required by Smart Turn Analyzer
 torch==2.4.0
 onnxruntime
