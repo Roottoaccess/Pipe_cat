@@ -48,7 +48,8 @@ from pipecat.processors.aggregators.llm_response_universal import LLMContextAggr
 from pipecat.processors.frameworks.rtvi import RTVIConfig, RTVIObserver, RTVIProcessor
 from pipecat.runner.types import RunnerArguments
 from pipecat.runner.utils import create_transport
-from pipecat.services.cartesia.tts import CartesiaTTSService
+# from pipecat.services.cartesia.tts import CartesiaTTSService
+from pipecat.services.openai.tts import OpenAITTSService
 from pipecat.services.deepgram.stt import DeepgramSTTService
 from pipecat.services.openai.llm import OpenAILLMService
 from pipecat.transports.base_transport import BaseTransport, TransportParams
@@ -64,10 +65,18 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments):
 
     stt = DeepgramSTTService(api_key=os.getenv("DEEPGRAM_API_KEY"))
 
-    tts = CartesiaTTSService(
-        api_key=os.getenv("CARTESIA_API_KEY"),
-        voice_id="71a7ad14-091c-4e8e-a314-022ece01c121",  # British Reading Lady
-    )
+    # tts = CartesiaTTSService(
+    #     api_key=os.getenv("CARTESIA_API_KEY"),
+    #     voice_id="71a7ad14-091c-4e8e-a314-022ece01c121",  # British Reading Lady
+    # )
+
+    # Using OpenAI TTS Service insted of Cartesia TTS Service
+    tts = OpenAITTSService(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    model="gpt-4o-mini-tts",   # or "gpt-4o-audio"
+    
+)
+
 
     llm = OpenAILLMService(api_key=os.getenv("OPENAI_API_KEY"))
 
