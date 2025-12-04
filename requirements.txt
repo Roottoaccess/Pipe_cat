@@ -1,38 +1,6 @@
-pipecat-ai==0.9.6
-
-loguru
-python-dotenv
-websockets
-aiohttp
-pydantic
-numpy
-sounddevice
-scipy
-
-# Deepgram STT
-deepgram-sdk
-
-# OpenAI (LLM + TTS)
-openai>=1.42.0
-
-# Optional: RTVI dependencies
-uvloop
-
-# Daily WebRTC Transport
-daily-python==0.10.2
-
-# Silero VAD model dependencies
-torch==2.2.2
-torchaudio==2.2.2
-
-# WebRTC support
-aiortc==1.9.0
-
-# General utilities
-requests
-python-dotenv
-loguru
-transformers
+pipecat
 fastapi
+python-dotenv
+pydantic
 requests
 uvicorn
