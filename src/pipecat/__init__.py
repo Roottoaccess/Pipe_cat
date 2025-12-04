@@ -7,11 +7,18 @@
 import sys
 from importlib.metadata import version
 
-from loguru import logger
+# from loguru import logger
 
-__version__ = version("pipecat-ai")
+# __version__ = version("pipecat-ai")
 
-logger.info(f"ᓚᘏᗢ Pipecat {__version__} (Python {sys.version}) ᓚᘏᗢ")
+# logger.info(f"ᓚᘏᗢ Pipecat {__version__} (Python {sys.version}) ᓚᘏᗢ")
+
+try:
+    from importlib.metadata import version
+    __version__ = version("pipecat-ai")
+except Exception:
+    __version__ = "local"
+
 
 # We replace `asyncio.wait_for()` for `wait_for2.wait_for()` for Python < 3.12.
 #
