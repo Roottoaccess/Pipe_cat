@@ -6,6 +6,7 @@ requests
 numpy
 scipy
 sounddevice
+soundfile
 uvloop
 pydantic
 transformers
@@ -18,8 +19,12 @@ deepgram-sdk
 # OpenAI LLM + TTS
 openai
 
-# Pipecat core
-pipecat
-
-# Daily transport used by Pipecat
+# Daily transport (correct)
 daily-python
+
+# Pipecat with all required components
+pipecat[audio,models,daily,openai,deepgram]
+
+# Needed for Silero + SmartTurn
+torch==2.4.0
+onnxruntime
