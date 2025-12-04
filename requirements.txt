@@ -1,11 +1,25 @@
+# Core dependencies
 loguru
 python-dotenv
 websockets
 aiohttp
-pydantic
+requests
 numpy
-sounddevice
 scipy
+sounddevice
+
+# Async performance (optional but recommended)
+uvloop
+
+# Data validation
+pydantic
+
+# ML utilities (optional but used by some Pipecat addons)
+transformers
+
+# FastAPI (if you expose an API, optional)
+fastapi
+uvicorn
 
 # Deepgram STT
 deepgram-sdk
@@ -13,14 +27,8 @@ deepgram-sdk
 # OpenAI (LLM + TTS)
 openai
 
-# Optional: RTVI dependencies
-uvloop
+# Pipecat Core
+pipecat
 
-# General utilities
-requests
-python-dotenv
-loguru
-transformers
-fastapi
-requests
-uvicorn
+# Daily Transport (required for create_transport / DailyParams)
+daily-python-sdk
