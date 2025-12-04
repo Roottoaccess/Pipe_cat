@@ -33,3 +33,6 @@ requests
 python-dotenv
 loguru
 transformers
+fastapi
+requests
+uvicorn
